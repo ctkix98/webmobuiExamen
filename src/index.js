@@ -1,7 +1,12 @@
 import {displaySection, activateLink} from './helpers.js'
+import * as apiCall from "./api";
+import "../src/sections/genres-item.js";
+import { displayGenres } from './elements/genres.js';
+
+console.log(await apiCall.getAlleGenres())
 
 
-const routeur = () => {
+const routeur = async () => {
   const hash = window.location.hash || '#genres'
   const hashs = hash.split('-')
 
@@ -10,6 +15,7 @@ const routeur = () => {
 
   switch(hashs[0]) {
     case '#genres':
+      displayGenres(await apiCall.getAlleGenres());
       displaySection('genres')
     break;
 
