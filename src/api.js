@@ -9,8 +9,14 @@ async function getAlleGenres(){
 
 async function getReceipesFromAGenre(id){
     const response = await fetch(`${BASE_URL}/api/genres/${id}/recipes`)
-    const listeGenres = await response.json()
-    return listeGenres;
+    const listeRecettes = await response.json()
+    return listeRecettes;
 }
 
-export {getAlleGenres, getReceipesFromAGenre}
+async function getAllRecipes(){
+    const response = await fetch(`${BASE_URL}/api/recipes`)
+    const listeToutesRecettes = await response.json()
+    return listeToutesRecettes;
+}
+
+export {getAlleGenres, getReceipesFromAGenre, getAllRecipes}
