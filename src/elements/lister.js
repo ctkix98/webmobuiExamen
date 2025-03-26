@@ -12,8 +12,8 @@ const previousButton = document.querySelector("card button--previous")
 let currentRecetteList = [];
 let currentRecette = null;
 
-export function putRecette(recette, arrayRecettesDonnees){
-    currentRecette = recette;
+export function putRecette(arrayRecettesDonnees){
+    currentRecette = arrayRecettesDonnees[0];
 
     if(arrayRecettesDonnees){
         currentRecetteList = arrayRecettesDonnees;
@@ -21,10 +21,8 @@ export function putRecette(recette, arrayRecettesDonnees){
 
     //displayRecette = currentRecette.id
     image.src = currentRecette.preview_url;
-    nameRecette.innerHTML = currentRecette.nameRecette;
+    nameRecette.innerHTML = currentRecette.name;
     detailRecette.innerHTML = currentRecette.steps
-
-    //Action ici
 
 }
 
@@ -48,5 +46,5 @@ function previousRecette(){
 
 }
 
-//nextButton.addEventListener("click", nextRecette);
-//previousButton.addEventListener("click", previousRecette);
+// nextButton.addEventListener("click", nextRecette);
+// previousButton.addEventListener("click", previousRecette);

@@ -41,7 +41,7 @@ const routeur = async () => {
 
     case "#inspiration":
       let allRecettes = await apiCall.getAllRecipes();
-      putRecette(0, allRecettes);
+      putRecette(allRecettes);
       displaySection("inspiration");
       break;
 
@@ -50,24 +50,19 @@ const routeur = async () => {
       displayGenres(favouriteGenres);
       displaySection("genres");
 
-      let titreFavoris = document.querySelector("#section-genres h4")
-      titreFavoris.textContent = `Likes (${favouriteGenres.length})`
-
+      let titreFavoris = document.querySelector("#section-genres h4");
+      titreFavoris.textContent = `Likes (${favouriteGenres.length})`;
 
       //Vérifier s'il y a le thumb up
-      const genreFavoris = document.querySelectorAll("genres-item")
-      genreFavoris.forEach((genre)=> {
-        genre.addEventListener("favorite", (e) =>{
-          e.target.remove()
+      const genreFavoris = document.querySelectorAll("genres-item");
+      genreFavoris.forEach((genre) => {
+        genre.addEventListener("favorite", (e) => {
+          e.target.remove();
           //Permet de mettre à jour le nombre d'articles dans intéressantes
-          favouriteGenres = getItems()
-          titreFavoris.textContent = `Likes (${favouriteGenres.length})`
-        })
-      })
-
-
-
-
+          favouriteGenres = getItems();
+          titreFavoris.textContent = `Likes (${favouriteGenres.length})`;
+        });
+      });
 
       break;
   }
