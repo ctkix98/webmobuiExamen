@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Marmitouille</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="index.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <a id="logo" href="/">
+        <span class="material-icons">food_bank</span>
+        Marmitouille
+      </a>
+
+      <nav>
+        <a href="#genres">
+          <span class="material-icons">restaurant_menu</span>
+          <span>Genres</span>
+        </a>
+        <a href="#inspiration">
+          <span class="material-icons">sync_alt</span>
+          <span>Inspiration</span>
+        </a>
+        <a href="#liked">
+          <span class="material-icons">thumb_up</span>
+          <span>Préférés</span>
+        </a>
+
+      </nav>
+    </header>
+
+    <main>
+      <!-- ajouter la classe "active" à une section pour l'afficher -->
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="section-inspiration">
+        <h4>Inspiration</h4>
+
+        <div class="card card--recipe-details">
+          <!-- .card--recipe-details img -->
+          <img src="https://placecats.com/200/139" />
+
+          <div class="card--recipe-details-details">
+            <!-- .card--recipe-details h4 -->
+            <h4>Pizza</h4>
+
+            <!-- .card--recipe-details p -->
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis elit maximus, consequat velit vitae,
+              laoreet felis. Morbi commodo vitae dolor nec scelerisque. Maecenas non urna orci.
+            </p>
+          </div>
+        </div>
+
+        <button class="card button--previous">
+          ◂ Recette précédente
+        </button>
+
+        <button class="card button--next">
+          Recette suivante ▸
+        </button>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="section-recipes">
+        <h4>Genres > Cuisine italienne</h4>
+
+        <div class="recipes">
+          <div>
+            <img class="recipes__elem__preview" src="https://placecats.com/200/139" />
+            <div class="recipes__elem__name">Pasta</div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+
+      <section id="section-genres">
+        <h4>Genres de recettes</h4>
+
+        <div class="genres">
+          <a href="#" class="genre-card">
+            <div class="card__buttons">
+              <!-- le plus simple est d'utiliser .starred-button comme querySelector pour le sélectionner -->
+              <button type="button" class="icon-button like-button">
+                <span class="material-icons">thumb_up_off_alt</span> <!-- utiliser "thumb_up" pour la version pleine -->
+              </button>
+            </div>
+
+            <img src="https://placecats.com/300/200" class="card__thumbnail" />
+
+            <div class="card__title">Cuisine italienne</div>
+            <!-- penser à garder l'écriture "[count] recettes" -->
+            <div class="card__count">2 recettes</div>
+          </a>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------------------------------------------>
+    </main>
+
+    <footer>
+      Marmitouille © 2025
+    </footer>
+  </body>
+</html>

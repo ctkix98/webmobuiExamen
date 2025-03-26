@@ -1,0 +1,16 @@
+{
+  "short_name": "Marmitouille",
+  "name": "Marmitouille - Proudly made by the HEIG25 group",
+  "icons": [
+    {
+      "src": "images/logo-marmitouille.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#121212",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#121212"
+}
