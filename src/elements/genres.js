@@ -11,7 +11,7 @@ export function displayGenres(arrayGenres) {
     genrePart.setAttribute("title", genre.title);
     genrePart.setAttribute("count", genre.count);
     genrePart.setAttribute("thumbnail_url", genre.thumbnail_url);
-   // genrePart.setAttribute("href", `#categories-${categorie.id}`)
+    genrePart.setAttribute("href", `#genres-${genre.id}`)
 
 
 

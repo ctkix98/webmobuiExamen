@@ -7,4 +7,10 @@ async function getAlleGenres(){
     return listeGenres;
 }
 
-export {getAlleGenres}
+async function getReceipesFromAGenre(id){
+    const response = await fetch(`${BASE_URL}/api/genres/${id}/recipes`)
+    const listeGenres = await response.json()
+    return listeGenres;
+}
+
+export {getAlleGenres, getReceipesFromAGenre}
