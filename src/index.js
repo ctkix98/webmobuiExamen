@@ -7,9 +7,13 @@ import { displayRecettes } from "./elements/recettes.js";
 import { putRecette } from "./elements/lister.js";
 import { getItems } from "./lib/local-storage.js";
 
-console.log(await apiCall.getAlleGenres());
-//console.log(await apiCall.getReceipesFromAGenre(1));
-console.log(await apiCall.getAllRecipes());
+
+//Appel du service worker
+navigator.serviceWorker.register('/worker.js')
+
+// console.log(await apiCall.getAlleGenres());
+// //console.log(await apiCall.getReceipesFromAGenre(1));
+// console.log(await apiCall.getAllRecipes());
 
 const routeur = async () => {
   const hash = window.location.hash || "#genres";
